@@ -10,10 +10,10 @@ class MainModel(models.Model):
 
 class ItemsModel(models.Model):
 	main_model = models.ForeignKey(MainModel,on_delete=models.CASCADE)
-	tag = models.CharField(max_length=10,null=False)
-	name = models.CharField(max_length=18,null=False)
+	tag = models.CharField(max_length=16,null=False)
+	name = models.CharField(max_length=32,null=False)
 	role = models.CharField(max_length=8,null=False)
-	lastSeen = models.CharField(max_length=20,null=False)
+	lastSeen = models.CharField(max_length=32,null=False)
 	expLevel = models.IntegerField(null=False)
 	trophies = models.IntegerField(null=False)
 	arena_id = models.IntegerField(null=False)

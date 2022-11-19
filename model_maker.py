@@ -621,14 +621,3 @@ app = QApplication(sys.argv)
 mainWindow = MainWindow()
 mainWindow.show()
 sys.exit(app.exec())
-
-if False and __name__ == "__main__":
-    parser = argparse.ArgumentParser(
-        description="Assemble a Django model from JSON input.")
-    parser.add_argument("--input", default="data.json", type=str)
-    parser.add_argument("--output", default="from_json_to_model.py", type=str)
-    parser.add_argument(
-        "--namingconvention", choices=("snake_case", "camelcase"), default=None, type=str)
-    args = parser.parse_args()
-    print(args)
-    creation_config = CreationConfig()
